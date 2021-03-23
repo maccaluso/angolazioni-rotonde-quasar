@@ -1,0 +1,243 @@
+// app global css in SCSS form
+
+$shortSteps: #E5D757;
+$easyWay: #EF7582;
+$warrior: #3C74AC;
+$breathTime: #ADCE75;
+
+body { color: $grey-9; }
+
+.text-short-steps { color: $shortSteps; }
+.text-easy-way { color: $easyWay; }
+.text-warrior { color: $warrior; }
+.text-breath-time { color: $breathTime; }
+
+.map-container {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  .ar-marker {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .marker-inner {
+      border-radius: 50%;
+      background-size: contain;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-color: $grey-2;
+
+      &.ar-marker-user-position { 
+        background-color: $primary;
+        background-image: url('~assets/position-icon.svg');
+      }
+    }
+  }
+
+  .ar-marker-luoghi-culturali-e-storici { background-image: url('~assets/category-icons/luoghi-culturali-e-storici.svg'); }
+  .ar-marker-dormire { background-image: url('~assets/category-icons/dormire.svg'); }
+  .ar-marker-comprare { background-image: url('~assets/category-icons/shopping.svg'); }
+  .ar-marker-mangiare-e-divertirsi { background-image: url('~assets/category-icons/mangiare.svg'); }
+  .ar-marker-parchi-cittadini { background-image: url('~assets/category-icons/parchi-cittadini.svg'); }
+  .ar-marker-parcheggi-disabili { background-image: url('~assets/category-icons/parcheggi-disabili.svg'); }
+  .ar-marker-servizi { background-image: url('~assets/category-icons/servizi-utili.svg'); }
+}
+
+.area-list-container { max-width: 100vw; }
+
+.venue-card {
+  .venue-description {
+    a {
+      color: $primary;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    iframe {
+      display: none;
+    }
+  }
+}
+
+.hyke-content-container {
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1rem;
+    margin-top: 45px;
+    font-weight: 700;
+    color: $secondary;
+
+    img {
+      margin-right: 15px;
+      max-width: 60px;
+      height: auto;
+    }
+  }
+
+  h5, h6 {
+    margin: 0;
+    margin-top: 60px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 500;
+  }
+
+  a {
+    text-decoration: none !important;
+    font-weight: 900 !important;
+    color: $secondary;
+
+    span {
+      font-weight: 900 !important;
+    }
+  }
+
+  img {
+    margin-bottom: -5px;
+    max-width: 60px;
+    height: auto;
+  }
+
+  iframe {
+    display: none;
+    max-width: 100%;
+    margin-top: 45px;
+  }
+}
+
+.static-page-container {
+  // h1, h2, h3, h4, h5, h6, p, ul { max-width: 75%; }
+
+  h1 {
+    margin: 0;
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+  }
+
+  h3 {
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+  }
+
+  h4 {
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  a {
+    color: $grey-9;
+    font-weight: 900;
+    text-decoration: none;
+    word-break: break-all;
+  }
+
+  .legenda {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+
+    li {
+      margin-bottom: 15px;
+
+      img {
+        width: 75px;
+        margin-right: 10px;
+        margin-bottom: -15px;
+      }
+  
+      h4 {
+        display: inline;
+        font-size: 1.5rem;
+      }
+
+      div {
+        position: relative;
+        margin-left: 90px;
+      }
+    }
+  }
+}
+
+.ar-venue-details {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+  a {
+    text-decoration: none !important;
+    color: $primary;
+
+    span {
+      font-weight: 900 !important;
+    }
+  }
+}
+
+.ar-hyke-details {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+  a {
+    text-decoration: none !important;
+    font-weight: 900 !important;
+    color: $secondary;
+
+    span {
+      font-weight: 900 !important;
+    }
+  }
+}
+
+.ar-venue-accessibility,
+.ar-hyke-accessibility {
+  img {
+    display: block;
+  }
+}
+
+.ar-accessibility-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
